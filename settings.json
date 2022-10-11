@@ -3,7 +3,7 @@
   "login": "Your login",
   "password": "Your password",
   "wait_for_the_password_field_load": 0.8,
-  "next_task_page_loading_time_limit": 10.0,
+  "next_task_page_loading_time_limit": 12.0,
   "min_delay_between_tasks": 40.0,
   "max_delay_between_tasks": 120.0
 }
