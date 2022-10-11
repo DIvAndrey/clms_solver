@@ -3,7 +3,7 @@
 
 ---
 
-Для запуска нужны `python 3.10` с два модулями: `selenium` и `requests`, а также последняя версия `google chrome`.
+Для запуска нужны `python` версии 3.10 с двумя модулями: `selenium` и `requests`, а также последняя версия `google chrome`.
 
 В файле `settings.json` необходимо указать свои логин и пароль от CLMS, либо сделать `automatic_password_entry` равным `false`.
 
