@@ -237,6 +237,17 @@ def type8():
     return len(elements) != 0
 
 
+def type9():
+    # Highlight correct words in text
+    elements = browser.find_elements(By.XPATH, '//span[@class="highlight-word seleccionCorrecta"]')
+    for el in elements:
+        try:
+            el.click()
+            time.sleep(0.2)
+        except Exception as e:
+            print(e)
+    return len(elements) != 0
+
 
 def switch_to_scorm_content():
     browser.switch_to.default_content()
@@ -259,7 +270,6 @@ delay_coeff2 = settings["min_delay_between_tasks"]
 input("Нажмите `enter`, чтобы начать")
 start_time = datetime.utcnow()
 while True:
-
     _ = browser.window_handles  # Check if browser is closed
     if (datetime.utcnow() - start_time).total_seconds() > settings["next_task_page_loading_time_limit"]:
         print("Не могу решить эту задачу, перехожу к следующей...")
@@ -272,7 +282,7 @@ while True:
     except Exception:
         continue
 
-    if not (type1() or type2() or type3() or type4() or type5() or type6() or type7() or type8()):
+    if not (type1() or type2() or type3() or type4() or type5() or type6() or type7() or type8() or type9()):
         continue
 
     t = random() * delay_coeff1 + delay_coeff2
